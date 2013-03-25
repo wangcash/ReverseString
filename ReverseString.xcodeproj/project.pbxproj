@@ -10,6 +10,7 @@
 		BDDCDE5416FCA9EB003AA98D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDCDE5316FCA9EB003AA98D /* Foundation.framework */; };
 		BDDCDE5716FCA9EB003AA98D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDCDE5616FCA9EB003AA98D /* main.m */; };
 		BDDCDE5B16FCA9EB003AA98D /* ReverseString.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDDCDE5A16FCA9EB003AA98D /* ReverseString.1 */; };
+		BDDCDE6316FCAA3A003AA98D /* NSString+Reverse.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDCDE6216FCAA3A003AA98D /* NSString+Reverse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		BDDCDE5616FCA9EB003AA98D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDDCDE5916FCA9EB003AA98D /* ReverseString-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReverseString-Prefix.pch"; sourceTree = "<group>"; };
 		BDDCDE5A16FCA9EB003AA98D /* ReverseString.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ReverseString.1; sourceTree = "<group>"; };
+		BDDCDE6116FCAA3A003AA98D /* NSString+Reverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Reverse.h"; sourceTree = "<group>"; };
+		BDDCDE6216FCAA3A003AA98D /* NSString+Reverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Reverse.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 		BDDCDE5516FCA9EB003AA98D /* ReverseString */ = {
 			isa = PBXGroup;
 			children = (
+				BDDCDE6116FCAA3A003AA98D /* NSString+Reverse.h */,
+				BDDCDE6216FCAA3A003AA98D /* NSString+Reverse.m */,
 				BDDCDE5616FCA9EB003AA98D /* main.m */,
 				BDDCDE5A16FCA9EB003AA98D /* ReverseString.1 */,
 				BDDCDE5816FCA9EB003AA98D /* Supporting Files */,
@@ -140,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDCDE5716FCA9EB003AA98D /* main.m in Sources */,
+				BDDCDE6316FCAA3A003AA98D /* NSString+Reverse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

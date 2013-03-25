@@ -7,15 +7,30 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSString+Reverse.h"
 
 int main(int argc, const char * argv[])
 {
 
   @autoreleasepool {
-      
-      // insert code here...
-      NSLog(@"Hello, World!");
-      
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"ss.SSSS"];
+    
+    NSString *string = @"abcdefghijklmnopqrstuvwxyz";
+    
+//    NSLog(@"s:%@", string);
+    
+    
+    NSLog(@"S %@", [dateFormatter stringFromDate:[NSDate date]]);
+    NSString *reversed = [string stringByReversed];
+    NSLog(@"E %@", [dateFormatter stringFromDate:[NSDate date]]);
+    
+    [dateFormatter release];
+    
+    
+//    NSLog(@"s:%@", reversed);
+    
   }
     return 0;
 }
