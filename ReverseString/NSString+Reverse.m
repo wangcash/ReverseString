@@ -10,6 +10,7 @@
 
 @implementation NSString (Reverse)
 
+//方法1
 //- (NSString *)stringByReversed
 //{
 //  NSMutableString *s = [NSMutableString string];
@@ -21,6 +22,7 @@
 //  return s;
 //}
 
+//方法2
 //- (NSString *)stringByReversed
 //{
 //  NSUInteger i = 0;
@@ -37,10 +39,27 @@
 //  return newString;
 //}
 
+//方法3
+//- (NSString *)stringByReversed{
+//  NSUInteger i = 0;
+//  NSUInteger j = self.length - 1;
+//  unichar characters[self.length];
+//  while (i < j) {
+//    characters[j] = [self characterAtIndex:i];
+//    characters[i] = [self characterAtIndex:j];
+//    i ++;
+//    j --;
+//  }
+//  if(i == j)
+//    characters[i] = [self characterAtIndex:i];
+//  return [NSString stringWithCharacters:characters length:self.length];
+//}
+
+//方法4
 - (NSString *)stringByReversed{
-  NSUInteger i = 0;
-  NSUInteger j = self.length - 1;
-  unichar characters[self.length];
+  uint64_t i = 0;
+  uint64_t j = self.length - 1;
+  unichar *characters = malloc(sizeof([self characterAtIndex:0]) * self.length);
   while (i < j) {
     characters[j] = [self characterAtIndex:i];
     characters[i] = [self characterAtIndex:j];
