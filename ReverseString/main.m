@@ -19,18 +19,15 @@ int main(int argc, const char * argv[])
     
     NSString *string = @"abcdefghijklmnopqrstuvwxyz";
     
-//    NSLog(@"s:%@", string);
+//    NSLog(@"string:%@", string);
     
-    
-    NSLog(@"S %@", [dateFormatter stringFromDate:[NSDate date]]);
+    NSLog(@"%@", [dateFormatter stringFromDate:[NSDate date]]);
     NSString *reversed = [string stringByReversed];
-    NSLog(@"E %@", [dateFormatter stringFromDate:[NSDate date]]);
+    NSLog(@"%@", [dateFormatter stringFromDate:[NSDate date]]);
+    
+    NSLog(@"reversed string:%@", reversed);
     
     [dateFormatter release];
-    
-    
-//    NSLog(@"s:%@", reversed);
-    
   }
     return 0;
 }
