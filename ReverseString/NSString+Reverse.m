@@ -11,52 +11,54 @@
 @implementation NSString (Reverse)
 
 //方法1
-//- (NSString *)stringByReversed
-//{
-//  NSMutableString *s = [NSMutableString string];
-//  
-//  for (NSUInteger i=self.length; i>0; i--) {
-//    [s appendString:[self substringWithRange:NSMakeRange(i-1, 1)]];
-//  }
-//  
-//  return s;
-//}
+- (NSString *)stringByReversed_
+{
+  NSMutableString *s = [NSMutableString string];
+  
+  for (NSUInteger i=self.length; i>0; i--) {
+    [s appendString:[self substringWithRange:NSMakeRange(i-1, 1)]];
+  }
+  
+  return s;
+}
 
 //方法2
-//- (NSString *)stringByReversed
-//{
-//  NSUInteger i = 0;
-//  NSUInteger j = self.length - 1;
-//  NSString *temp;
-//  NSString *newString = self;
-//  while (i < j) {
-//    temp = [newString substringWithRange:NSMakeRange(i, 1)];
-//    newString = [newString stringByReplacingCharactersInRange:NSMakeRange(i, 1) withString:[self substringWithRange:NSMakeRange(j, 1)]];
-//    newString = [newString stringByReplacingCharactersInRange:NSMakeRange(j, 1) withString:temp];
-//    i ++;
-//    j --;
-//  }
-//  return newString;
-//}
+- (NSString *)stringByReversed__
+{
+  NSUInteger i = 0;
+  NSUInteger j = self.length - 1;
+  NSString *temp;
+  NSString *newString = self;
+  while (i < j) {
+    temp = [newString substringWithRange:NSMakeRange(i, 1)];
+    newString = [newString stringByReplacingCharactersInRange:NSMakeRange(i, 1) withString:[self substringWithRange:NSMakeRange(j, 1)]];
+    newString = [newString stringByReplacingCharactersInRange:NSMakeRange(j, 1) withString:temp];
+    i ++;
+    j --;
+  }
+  return newString;
+}
 
 //方法3
-//- (NSString *)stringByReversed{
-//  NSUInteger i = 0;
-//  NSUInteger j = self.length - 1;
-//  unichar characters[self.length];
-//  while (i < j) {
-//    characters[j] = [self characterAtIndex:i];
-//    characters[i] = [self characterAtIndex:j];
-//    i ++;
-//    j --;
-//  }
-//  if(i == j)
-//    characters[i] = [self characterAtIndex:i];
-//  return [NSString stringWithCharacters:characters length:self.length];
-//}
+- (NSString *)stringByReversed___
+{
+  NSUInteger i = 0;
+  NSUInteger j = self.length - 1;
+  unichar characters[self.length];
+  while (i < j) {
+    characters[j] = [self characterAtIndex:i];
+    characters[i] = [self characterAtIndex:j];
+    i ++;
+    j --;
+  }
+  if(i == j)
+    characters[i] = [self characterAtIndex:i];
+  return [NSString stringWithCharacters:characters length:self.length];
+}
 
 //方法4
-- (NSString *)stringByReversed{
+- (NSString *)stringByReversed
+{
   uint64_t i = 0;
   uint64_t j = self.length - 1;
   unichar *characters = malloc(sizeof([self characterAtIndex:0]) * self.length);
